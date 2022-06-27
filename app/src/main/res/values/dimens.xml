@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name= "textSize">36sp</dimen>
+    <dimen name= "cornerRadius">42dp</dimen>
+    <dimen name= "sizeLayout_marginBottom">4dp</dimen>
+    <dimen name= "sizeLayout">84dp</dimen>
+
+</resources>
