@@ -17,11 +17,11 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:padding="16dp"
-        tools:context=".MainActivity"
+        tools:context=".view.ui.MainActivity"
         tools:ignore="MissingClass">
 
         <TextView
-            android:id="@+id/key_21"
+            android:id="@+id/key_resulting_field"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="16dp"
@@ -29,7 +29,7 @@
             android:text="@string/key_0"
             android:textColor="@color/grey_back"
             android:textSize="96sp"
-            app:layout_constraintBottom_toTopOf="@id/key_18"
+            app:layout_constraintBottom_toTopOf="@id/key_square"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -37,26 +37,26 @@
             tools:ignore="RtlHardcoded" />
 
         <Button
-            android:id="@+id/key_1"
+            android:id="@+id/key_plumin"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_plus_or_minus"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/key_2"
+            app:layout_constraintEnd_toStartOf="@id/key_0"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
             android:backgroundTint="@color/green"/>
 
         <Button
-            android:id="@+id/key_2"
+            android:id="@+id/key_0"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_0"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/key_1"
-            app:layout_constraintEnd_toStartOf="@id/key_3"
+            app:layout_constraintStart_toEndOf="@id/key_plumin"
+            app:layout_constraintEnd_toStartOf="@id/key_drop"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
@@ -64,13 +64,13 @@
             />
 
         <Button
-            android:id="@+id/key_3"
+            android:id="@+id/key_drop"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_drop"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/key_2"
-            app:layout_constraintEnd_toStartOf="@id/key_4"
+            app:layout_constraintStart_toEndOf="@id/key_0"
+            app:layout_constraintEnd_toStartOf="@id/key_result"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
@@ -78,12 +78,12 @@
             />
 
         <Button
-            android:id="@+id/key_4"
+            android:id="@+id/key_result"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_equally"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/key_3"
+            app:layout_constraintStart_toEndOf="@id/key_drop"
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
@@ -92,12 +92,87 @@
             />
 
         <Button
-            android:id="@+id/key_5"
+            android:id="@+id/key_1"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_1"
+            app:layout_constraintBottom_toTopOf="@id/key_plumin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/key_2"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            app:cornerRadius="@dimen/cornerRadius"
+            android:textSize="@dimen/textSize"
+            android:backgroundTint="@color/grey"
+            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
+            />
+
+        <Button
+            android:id="@+id/key_2"
+            android:layout_width="@dimen/sizeLayout"
+            android:layout_height="@dimen/sizeLayout"
+            android:text="@string/key_2"
+            app:layout_constraintBottom_toTopOf="@id/key_0"
+            app:layout_constraintStart_toEndOf="@id/key_plumin"
+            app:layout_constraintEnd_toStartOf="@id/key_3"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            app:cornerRadius="@dimen/cornerRadius"
+            android:textSize="@dimen/textSize"
+            android:backgroundTint="@color/grey"
+            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
+            />
+
+        <Button
+            android:id="@+id/key_3"
+            android:layout_width="@dimen/sizeLayout"
+            android:layout_height="@dimen/sizeLayout"
+            android:text="@string/key_3"
+            app:layout_constraintBottom_toTopOf="@id/key_drop"
+            app:layout_constraintStart_toEndOf="@id/key_2"
+            app:layout_constraintEnd_toStartOf="@id/key_plus"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            app:cornerRadius="@dimen/cornerRadius"
+            android:textSize="@dimen/textSize"
+            android:backgroundTint="@color/grey"
+            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
+            />
+
+        <Button
+            android:id="@+id/key_plus"
+            android:layout_width="@dimen/sizeLayout"
+            android:layout_height="@dimen/sizeLayout"
+            android:text="@string/key_plus"
+            app:layout_constraintBottom_toTopOf="@id/key_result"
+            app:layout_constraintStart_toEndOf="@id/key_3"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cornerRadius="@dimen/cornerRadius"
+            android:textSize="@dimen/textSize"
+            android:backgroundTint="@color/green"
+            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
+            />
+
+        <Button
+            android:id="@+id/key_4"
+            android:layout_width="@dimen/sizeLayout"
+            android:layout_height="@dimen/sizeLayout"
+            android:text="@string/key_4"
             app:layout_constraintBottom_toTopOf="@id/key_1"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/key_5"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            app:cornerRadius="@dimen/cornerRadius"
+            android:textSize="@dimen/textSize"
+            android:backgroundTint="@color/grey"
+            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
+            />
+
+        <Button
+            android:id="@+id/key_5"
+            android:layout_width="@dimen/sizeLayout"
+            android:layout_height="@dimen/sizeLayout"
+            android:text="@string/key_5"
+            app:layout_constraintBottom_toTopOf="@id/key_2"
+            app:layout_constraintStart_toEndOf="@id/key_4"
             app:layout_constraintEnd_toStartOf="@id/key_6"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
@@ -110,10 +185,10 @@
             android:id="@+id/key_6"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_2"
-            app:layout_constraintBottom_toTopOf="@id/key_2"
-            app:layout_constraintStart_toEndOf="@id/key_1"
-            app:layout_constraintEnd_toStartOf="@id/key_7"
+            android:text="@string/key_6"
+            app:layout_constraintBottom_toTopOf="@id/key_3"
+            app:layout_constraintStart_toEndOf="@id/key_5"
+            app:layout_constraintEnd_toStartOf="@id/key_mines"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
@@ -122,12 +197,27 @@
             />
 
         <Button
+            android:id="@+id/key_mines"
+            android:layout_width="@dimen/sizeLayout"
+            android:layout_height="@dimen/sizeLayout"
+            android:text="@string/key_minus"
+            app:layout_constraintBottom_toTopOf="@id/key_plus"
+            app:layout_constraintStart_toEndOf="@id/key_6"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cornerRadius="@dimen/cornerRadius"
+            android:textSize="@dimen/textSize"
+            android:backgroundTint="@color/green"
+            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
+            />
+
+        <Button
             android:id="@+id/key_7"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_3"
-            app:layout_constraintBottom_toTopOf="@id/key_3"
-            app:layout_constraintStart_toEndOf="@id/key_6"
+            android:text="@string/key_7"
+            app:layout_constraintBottom_toTopOf="@id/key_4"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/key_8"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
@@ -140,14 +230,14 @@
             android:id="@+id/key_8"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_plus"
-            app:layout_constraintBottom_toTopOf="@id/key_4"
+            android:text="@string/key_8"
+            app:layout_constraintBottom_toTopOf="@id/key_5"
             app:layout_constraintStart_toEndOf="@id/key_7"
+            app:layout_constraintEnd_toStartOf="@id/key_9"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            app:layout_constraintEnd_toEndOf="parent"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/grey"
             android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
             />
 
@@ -155,100 +245,10 @@
             android:id="@+id/key_9"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_4"
-            app:layout_constraintBottom_toTopOf="@id/key_5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/key_10"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            app:cornerRadius="@dimen/cornerRadius"
-            android:textSize="@dimen/textSize"
-            android:backgroundTint="@color/grey"
-            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
-            />
-
-        <Button
-            android:id="@+id/key_10"
-            android:layout_width="@dimen/sizeLayout"
-            android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_5"
-            app:layout_constraintBottom_toTopOf="@id/key_6"
-            app:layout_constraintStart_toEndOf="@id/key_9"
-            app:layout_constraintEnd_toStartOf="@id/key_11"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            app:cornerRadius="@dimen/cornerRadius"
-            android:textSize="@dimen/textSize"
-            android:backgroundTint="@color/grey"
-            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
-            />
-
-        <Button
-            android:id="@+id/key_11"
-            android:layout_width="@dimen/sizeLayout"
-            android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_6"
-            app:layout_constraintBottom_toTopOf="@id/key_7"
-            app:layout_constraintStart_toEndOf="@id/key_10"
-            app:layout_constraintEnd_toStartOf="@id/key_12"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            app:cornerRadius="@dimen/cornerRadius"
-            android:textSize="@dimen/textSize"
-            android:backgroundTint="@color/grey"
-            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
-            />
-
-        <Button
-            android:id="@+id/key_12"
-            android:layout_width="@dimen/sizeLayout"
-            android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_minus"
-            app:layout_constraintBottom_toTopOf="@id/key_8"
-            app:layout_constraintStart_toEndOf="@id/key_11"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:cornerRadius="@dimen/cornerRadius"
-            android:textSize="@dimen/textSize"
-            android:backgroundTint="@color/green"
-            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
-            />
-
-        <Button
-            android:id="@+id/key_13"
-            android:layout_width="@dimen/sizeLayout"
-            android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_7"
-            app:layout_constraintBottom_toTopOf="@id/key_9"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/key_14"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            app:cornerRadius="@dimen/cornerRadius"
-            android:textSize="@dimen/textSize"
-            android:backgroundTint="@color/grey"
-            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
-            />
-
-        <Button
-            android:id="@+id/key_14"
-            android:layout_width="@dimen/sizeLayout"
-            android:layout_height="@dimen/sizeLayout"
-            android:text="@string/key_8"
-            app:layout_constraintBottom_toTopOf="@id/key_10"
-            app:layout_constraintStart_toEndOf="@id/key_13"
-            app:layout_constraintEnd_toStartOf="@id/key_15"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            app:cornerRadius="@dimen/cornerRadius"
-            android:textSize="@dimen/textSize"
-            android:backgroundTint="@color/grey"
-            android:layout_marginBottom="@dimen/sizeLayout_marginBottom"
-            />
-
-        <Button
-            android:id="@+id/key_15"
-            android:layout_width="@dimen/sizeLayout"
-            android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_9"
-            app:layout_constraintBottom_toTopOf="@id/key_11"
-            app:layout_constraintStart_toEndOf="@id/key_14"
-            app:layout_constraintEnd_toStartOf="@id/key_16"
+            app:layout_constraintBottom_toTopOf="@id/key_6"
+            app:layout_constraintStart_toEndOf="@id/key_8"
+            app:layout_constraintEnd_toStartOf="@id/key_mult"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
@@ -257,12 +257,12 @@
             />
 
         <Button
-            android:id="@+id/key_16"
+            android:id="@+id/key_mult"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_multiplying"
-            app:layout_constraintBottom_toTopOf="@id/key_12"
-            app:layout_constraintStart_toEndOf="@id/key_15"
+            app:layout_constraintBottom_toTopOf="@id/key_mines"
+            app:layout_constraintStart_toEndOf="@id/key_9"
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
@@ -272,13 +272,13 @@
             />
 
         <Button
-            android:id="@+id/key_17"
+            android:id="@+id/key_reset"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_clear"
-            app:layout_constraintBottom_toTopOf="@id/key_13"
+            app:layout_constraintBottom_toTopOf="@id/key_7"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/key_18"
+            app:layout_constraintEnd_toStartOf="@id/key_square"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
@@ -288,13 +288,13 @@
             />
 
         <Button
-            android:id="@+id/key_18"
+            android:id="@+id/key_square"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_parentheses"
-            app:layout_constraintBottom_toTopOf="@id/key_14"
-            app:layout_constraintStart_toEndOf="@id/key_17"
-            app:layout_constraintEnd_toStartOf="@id/key_19"
+            app:layout_constraintBottom_toTopOf="@id/key_8"
+            app:layout_constraintStart_toEndOf="@id/key_reset"
+            app:layout_constraintEnd_toStartOf="@id/key_root"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
@@ -303,13 +303,13 @@
             />
 
         <Button
-            android:id="@+id/key_19"
+            android:id="@+id/key_root"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_percent"
-            app:layout_constraintBottom_toTopOf="@id/key_15"
-            app:layout_constraintStart_toEndOf="@id/key_18"
-            app:layout_constraintEnd_toStartOf="@id/key_20"
+            app:layout_constraintBottom_toTopOf="@id/key_9"
+            app:layout_constraintStart_toEndOf="@id/key_square"
+            app:layout_constraintEnd_toStartOf="@id/key_div"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
             android:textSize="@dimen/textSize"
@@ -318,12 +318,12 @@
             />
 
         <Button
-            android:id="@+id/key_20"
+            android:id="@+id/key_div"
             android:layout_width="@dimen/sizeLayout"
             android:layout_height="@dimen/sizeLayout"
             android:text="@string/key_division"
-            app:layout_constraintBottom_toTopOf="@id/key_16"
-            app:layout_constraintStart_toEndOf="@id/key_19"
+            app:layout_constraintBottom_toTopOf="@id/key_mult"
+            app:layout_constraintStart_toEndOf="@id/key_root"
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
             app:cornerRadius="@dimen/cornerRadius"
