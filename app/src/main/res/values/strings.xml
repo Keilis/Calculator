@@ -13,8 +13,8 @@
     <string name="key_drop">,</string>
     <string name="key_plus_or_minus">+-</string>
     <string name="key_clear">C</string>
-    <string name="key_parentheses">()</string>
-    <string name="key_percent">%</string>
+    <string name="key_parentheses">x²</string>
+    <string name="key_percent">√</string>
     <string name="key_division">\u00F7</string>
     <string name="key_multiplying">X</string>
     <string name="key_minus">-</string>
